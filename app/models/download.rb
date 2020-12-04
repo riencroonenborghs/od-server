@@ -20,7 +20,7 @@ class Download < ApplicationRecord
 
   def enqueue!    
     return if queued? || started?
-    # DownloadJob.perform_later self.id
+    DownloadJob.perform_later self.id
     queue!
   end
 
