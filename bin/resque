@@ -1,0 +1,1 @@
+foreman start -c worker=2,torrent_worker=1
