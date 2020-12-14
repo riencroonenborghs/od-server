@@ -4,7 +4,7 @@ class DownloadService
     raise StandardError, "Cannot find download with ID #{id}" unless download
     
     case download.url
-    when /youtube\.com/
+    when /youtube\.com|youtu\.be/
       download = download.to_youtube_dl
     when /magnet\:/
       download = download.to_transmission_cli
