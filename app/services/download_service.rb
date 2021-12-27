@@ -8,6 +8,8 @@ class DownloadService
       download = download.to_youtube_dl
     when /magnet\:/
       download = download.to_transmission_cli
+    when /drive\.google/
+      download = download.to_gdl
     else
       download = download.to_wget
     end

@@ -1,5 +1,7 @@
 module Mutations
   class CreateDownload < BaseMutation
+    null true
+    
     # arguments passed to the `resolve` method
     argument :url, String, required: true
     argument :http_username, String, required: false

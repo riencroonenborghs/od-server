@@ -72,6 +72,10 @@ class Download < ApplicationRecord
     Download::Wget.find self.id
   end
 
+  def to_gdl
+    Download::Gdl.find self.id
+  end
+
   private
 
   def http_credentials
